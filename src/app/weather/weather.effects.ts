@@ -18,7 +18,7 @@ export class Weathereffects {
     this.actions$.pipe(
       ofType(loadActions.loadWeather),
       switchMap(({city}) =>
-        this.http.get<any>(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ebd83c1c4cdd4d646e94bb567d7bfb9b&units=metric`)
+        this.http.get<any>(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=_KEY_&units=metric`)
         .pipe(
           delay(1000)
         )
